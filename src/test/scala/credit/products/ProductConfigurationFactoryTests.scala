@@ -18,7 +18,7 @@ class ProductConfigurationFactoryTests extends FunSuite{
 
   test("getLocation returns the download location for the specified id"){
     val factory = new ProductConfigurationFactory()
-    assert(factory.getLocation("AQUA") == "src/test/data/card-applications/")
+    assert(factory.getLocation("AQUA") == "src/test/data/product-applications/")
   }
 
   test("getLocation throws IllegalArgumentException when ProductConfiguration does not exist"){
@@ -30,7 +30,7 @@ class ProductConfigurationFactoryTests extends FunSuite{
 
   test("getExtension returns the file extension for the specified Product id."){
     val factory = new ProductConfigurationFactory()
-    assert(factory.getExtension("AQUA") == ".json")
+    assert(factory.getExtension("AQUA") == "AQUA-applications.json")
   }
 
   test("getExtension throws IllegalArgumentException when ProductConfiguration does not exist.") {

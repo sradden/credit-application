@@ -10,7 +10,7 @@ class ProductConfigurationBuilderTests extends FunSuite{
     assert(configDefaults.keys.size == 3)
     assert(configDefaults.contains("AQUA") && configDefaults.contains("FLUID") && configDefaults.contains("DUMMY"))
     val config = configDefaults("AQUA")
-    assert(config.extension == ".json" && config.location == "src/test/data/card-applications/")
+    assert(config.extension == "AQUA-applications.json" && config.location == "src/test/data/product-applications/")
   }
 
   test("withLocation returns a new [[ProductConfigurationBuilder]] with the supplied location"){
