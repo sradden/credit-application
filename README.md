@@ -40,8 +40,8 @@ new CreditProductApp(CreditProductSettings.apply()).main(Array())
 The `Product` trait represents a credit product that consumers are applying for. Specifc cards i.e. AQUA extend the `Product` trait with implementation details specific to the product. Each `Product` is configured using a `ProductConfiguration` class and returned via a `ProductConfigurationFactory`. `ProductConfigurationFactory` takes a `ProductConfigurationBuilder` to create instances of `ProductConfiguration` so if you want to on-board new products then you will add these here.
 
 ## AQUA Product
-The `AquaProduct` extends the `Product` trait with implementation specific to the Aqua credit card. Applications for this card are received in .json format so the class reads the new applications into a spark `DataFrame` and validates the applications by obtaining credit scores from the `CreditRating` object for each applicant before applying business rules to determine the validity of each application. The results are returned to the CreditProductApp to be written to disk in `parquet` format.
+The `AquaProduct` extends the `Product` trait with implementation specific to the Aqua credit card. Applications for this card are received in `.json` format so the class reads the new applications into a spark `DataFrame` and validates the applications by obtaining credit scores from the `CreditRating` object for each applicant before applying business rules to determine the validity of each application. The results are returned to the CreditProductApp to be written to disk in `parquet` format.
 
-## parquet Output
+## Output
 The result of each product application are written to disk in `parquet` format, partitioned by product id and processed timestamp
 ![image](https://user-images.githubusercontent.com/17062331/116939979-20fc1d80-ac65-11eb-8d72-941fd65eca99.png)
