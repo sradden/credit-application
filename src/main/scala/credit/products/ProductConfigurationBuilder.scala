@@ -18,10 +18,10 @@ case class ProductConfigurationBuilder(
    * */
   private val productDefaults: Map[String, ProductConfiguration] = Map(
     "AQUA"-> ProductConfiguration(
-      id = "AQUA", location = "src/test/data/card-applications/", extension = ".json"
+      id = "AQUA", location = "src/test/data/product-applications/", extension = "AQUA-applications.json"
     ),
     "FLUID"-> ProductConfiguration(
-      id = "FLUID", location = "s3://bucket-name", extension = ".parquet`"
+      id = "FLUID", location = "s3://bucket-name", extension = ".parquet"
     ),
     "DUMMY"-> ProductConfiguration(
       id = "DUMMY", location = "/tmp", extension = ".DUMMY"

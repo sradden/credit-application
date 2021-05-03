@@ -1,6 +1,6 @@
 package credit.products
 
-import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.DataFrame
 
 import java.time.Instant
 
@@ -12,7 +12,7 @@ trait Product {
   val minSalary: Double
   val productConfiguration: Map[String, String]
   val path: String
-  private val spark: SparkSession = SparkSession.builder().getOrCreate()
+  //private val spark: SparkSession = SparkSession.builder().getOrCreate()
 
   def processApplicants(at: Instant) : DataFrame
 }

@@ -7,7 +7,8 @@ class ProductFactory (configurationFactory: ProductConfigurationFactory){
 
   // retrieves a list of configured products
   val registeredProducts: Map[String, Product] = Map(
-    "AQUA"-> new AquaProduct(configurationFactory)
+    "AQUA" -> new AquaProduct(configurationFactory),
+    "FLUID" -> new DefaultProduct(configurationFactory)
     // TODO addition products here as they go live
   )
 }

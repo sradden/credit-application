@@ -1,7 +1,7 @@
 
-import java.time.Instant
 import credit.products.{ProductConfigurationFactory, ProductFactory}
-import org.apache.spark.sql.SaveMode
+
+import java.time.Instant
 
 /**
  * [[CreditProductApp]] is the main class to process new credit applications
@@ -32,11 +32,11 @@ class CreditProductApp(settings: CreditProductSettings = CreditProductSettings.a
     // pass the current Instant to indicate when applicants were processed
     val at: Instant = Instant.now()
     try {
+      // for each application, output the result to parquet file
       products.foreach(
         _.processApplicants(at)
           .write
-          .partitionBy("id", "date")
-          .mode(SaveMode.Append)
+          .partitionBy("product_id", "processed_at")
           .parquet(s"${settings.applicantResultPath}"))
       true
     }

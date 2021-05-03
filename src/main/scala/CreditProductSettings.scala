@@ -52,5 +52,5 @@ trait ProductConfiguration {
   /**
    * The location where the product application result parquet files are stored.
    */
-  def applicantResultPath = "src/main/resources/applicant-result"
+  def applicantResultPath = "applicant-result"
 }
