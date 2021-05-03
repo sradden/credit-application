@@ -25,5 +25,9 @@ If specified, `CreditProductSettings` provides specific settings to the app. Whe
 // user specific settings
 val app: CreditProductApp = new CreditProductApp(new CreditProductSettings(Map[Symbol, Any]))
 // default settings
-val app: CreditProdctApp = new CreditProductApp()
+val app: CreditProductApp = new CreditProductApp()
+```
+`CreditProductSettings` can be instantiated by passing a `Map[Symbol, Any]` as an argument. The following Map shows the settings that can be specified:
+```scala
+Map(`cores -> 3, `hadoop_dir -> "hadoop path", `product -> "AQUA", `app_name -> "name of app", `location -> "output path for result of application")
 ```
