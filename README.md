@@ -27,12 +27,10 @@ val app: CreditProductApp = new CreditProductApp(new CreditProductSettings(Map[S
 // default settings
 val app: CreditProductApp = new CreditProductApp()
 ```
-`CreditProductSettings` can be instantiated by passing a `Map[Symbol, Any]` as an argument. The following Map shows the settings that can be specified:
+`CreditProductSettings` can be instantiated by passing a `Map[Symbol, Any]` as an argument. If you pass an empty Map then default values will be applied. The following Map shows the settings that can be specified:
 ```scala
 Map(`cores -> 3, `hadoop_dir -> "hadoop path", `product -> "AQUA", `app_name -> "name of app", `location -> "output path for result of application")
 ```
-If you pass an empty Map as an argument then default values will be applied.
-
 To run the application using default settings enter the following command:
 
 ```scala
